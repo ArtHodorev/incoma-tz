@@ -1,0 +1,20 @@
+<div class="filter-wrap">
+  <h2 class="mat-title">Filter, please</h2>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Name" [(ngModel)]="filter.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Type</mat-label>
+      <mat-select [(ngModel)]="filter.type" name="type">
+        <mat-option *ngFor="let type of types" [value]="type.value">
+          {{type.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="toResult()">Go!</button>
+  </form>
+</div>
+
+
+
